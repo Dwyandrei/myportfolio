@@ -1,0 +1,50 @@
+body {
+    background: linear-gradient(300deg, black, white)
+}
+h1 {
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+}
+div .tool {
+    position: relative;
+    display: inline-block;
+}
+div .image {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    bottom: -525px;
+    right: 48%;
+}
+.tool .tooltip {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    border-radius: 6px;
+    padding: 5px 5px;
+    z-index: 1;
+    position: relative;
+    bottom: -495px;
+    right: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.tool .tooltip::after {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+     margin-left: -5px;
+     border-width: 5px;
+     border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+.tool:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+
